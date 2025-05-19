@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invictus Sports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#academies">Academies</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#specs">Technical Specs</a></li>
+        <li><a href="#projects">Our Projects</a></li>
+        <li><a href="#clientele">Clientele</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Invictus Logo" style="width: 150px;">
+    <h1>Invictus Sports</h1>
+    <p>Transforming Sports Infrastructure & Experiences</p>
+</header>
+
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>At Invictus Sports, we are dedicated to transforming the sporting experience through high-quality infrastructure and innovative solutions. From professional-grade turfs and courts to multi-sports facilities, we provide top-tier surfaces that meet international standards.</p>
+</section>
+
+<section id="services" class="section">
+    <img src="{{ url_for('static', filename='images/services.jpg') }}" alt="Services">
+    <h2>Our Services</h2>
+    <ul>
+        <li><strong>Infrastructure:</strong> Turf, Pickleball, Badminton, Padel, Volleyball, Lawn Tennis, Squash, Basketball, Table Tennis, Cricket Pitches</li>
+        <li><strong>Flooring:</strong> PVC, Wooden, Gymnastic, Interlocking Tiles, Concrete/Asphalt Bases</li>
+        <li><strong>Equipment:</strong> Jerseys, protective gear, training and fitness gear</li>
+        <li><strong>Specials:</strong> Kids play areas, nets, LED lighting, pole padding</li>
+    </ul>
+</section>
+
+<section id="specifications" class="section">
+    <img src="{{ url_for('static', filename='images/specs.jpg') }}" alt="Specs">
+    <h2>Specifications</h2>
+    <ul>
+        <li><strong>Turf:</strong> 50mm PE, UV resistant, infill</li>
+        <li><strong>Pickleball:</strong> 5 or 8 Layer acrylic system</li>
+        <li><strong>Badminton:</strong> PVC (4.5–8mm) or Wooden (53–57% shock absorb)</li>
+        <li><strong>Padel Court:</strong> Artificial grass, tempered glass, steel mesh</li>
+        <li><strong>Squash:</strong> Maple wood flooring, plaster walls, glass backwall</li>
+        <li><strong>Tennis:</strong> Grass, Clay, Hard, and Carpet courts</li>
+<li><strong>Volleyball & Basketball</strong> 3, 5 or 8 Layer acrylic system</li>
+<li><strong>Cricket Pitch</strong> Natural Pitch, Artificial Pitch, Concrete Pitch, Astro Turf</li>
+    </ul>
+</section>
+
+<section id="academies" class="section">
+    <img src="{{ url_for('static', filename='images/academies.jpg') }}" alt="Academies">
+    <h2>Our Academies</h2>
+    <ul>
+        <li>🏏 Cricket Academy – Certified coaches, structured training programs</li>
+        <li>⚽ Football Academy – Skill and age-based coaching modules</li>
+        <li>🏓 Pickleball Academy – Tactical, fast-paced coaching programs</li>
+    </ul>
+    <p><strong>Highlights:</strong> Game basics, advanced training, matches, nutrition, fitness & injury prevention.</p>
+</section>
+
+<section id="events" class="section">
+    <img src="{{ url_for('static', filename='images/events.webp') }}" alt="Events">
+    <h2>Events</h2>
+    <ul>
+        <li>India vs Bangladesh Differently Abled Cup</li>
+        <li>ASOS T10 Super Bash</li>
+        <li>Evolution Cup</li>
+        <li>Baby League</li>
+    </ul>
+</section>
+
+
+<section id="projects" class="section">
+    <h2>Our Projects</h2>
+    <div class="gallery-grid">
+        {% for i in range(1, 13) %}
+            <img src="{{ url_for('static', filename='images/projects/project' ~ i ~ '.png') }}" alt="Project {{ i }}">
+        {% endfor %}
+    </div>
+</section>
+
+<section id="clientele" class="section">
+    <h2>Our Clientele</h2>
+    <div class="gallery-grid clientele-grid">
+        {% for i in range(1, 17) %}
+            <img src="{{ url_for('static', filename='images/clientele/client' ~ i ~ '.png') }}" alt="Client {{ i }}">
+        {% endfor %}
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p>📞 +91 99536 75970 | +91 62917 42451</p>
+    <p>📧 <a href="mailto:sportsinvictus.info@gmail.com">sportsinvictus.info@gmail.com</a></p>
+    <p>📍 381 M.G. Road, Kolkata - 700082</p>
+</section>
+
+<footer>
+    <p>Follow Us: 
+        <a href="https://instagram.com/theinvictussports">Instagram</a> | 
+        <a href="https://facebook.com/profile.php?id=61573489857758">Facebook</a> | 
+        <a href="https://linkedin.com/company/105916872">LinkedIn</a>
+    </p>
+</footer>
+
+</body>
+</html>
